@@ -1,6 +1,6 @@
-name: 'PMD Automatic reviewer'
-author: Matias Kruk
-description: 'This action allows to use PMD Source Code Analyzer from GitHub Actions and publish by Salesforce API REST'
+name: 'Install PMD'
+author: Steve Babula - forked from Matias Kruk
+description: 'This action installs and configures PMD Source Code Analyzer (version 6.26) for use within GitHub Actions.'
 runs:
   using: 'node12'
   main: 'index.js'
