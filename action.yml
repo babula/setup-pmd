@@ -2,7 +2,7 @@ name: 'Install PMD'
 author: Steve Babula - forked from Matias Kruk
 description: 'This action installs and configures PMD Source Code Analyzer (version 6.26) for use within GitHub Actions.'
 runs:
-  using: 'node12'
+  using: 'node16'
   main: 'index.js'
 branding:
   icon: 'award'  
