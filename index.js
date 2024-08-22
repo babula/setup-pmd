@@ -1,8 +1,6 @@
 const core = require('@actions/core')
 const exec = require('child_process').exec
 
-const PMD_VERSION = "7.4.0";
-
 try {
     installPMD()
 } catch (error) {
@@ -10,10 +8,10 @@ try {
 }
 
 function installPMD() {
-    var download = 'wget https://github.com/pmd/pmd/releases/download/pmd_releases%2F${PMD_VERSION}/pmd-dist-${PMD_VERSION}-bin.zip -P /tmp'
-    var unzip = 'unzip /tmp/pmd-dist-${PMD_VERSION}-bin.zip -d /tmp'
+    var download = 'wget https://github.com/pmd/pmd/releases/download/pmd_releases%2F7.4.0/pmd-dist-7.4.0-bin.zip -P /tmp'
+    var unzip = 'unzip /tmp/pmd-dist-7.4.0-bin.zip -d /tmp'
     var mk = 'mkdir $HOME/pmd'
-    var mv = 'mv /tmp/pmd-bin-${PMD_VERSION}/* $HOME/pmd'
+    var mv = 'mv /tmp/pmd-bin-7.4.0/* $HOME/pmd'
     exec(download + ' && ' + unzip + ' && ' + mk + ' && ' + mv, function(error, stdout, stderr) {
         if (error) core.setFailed(stderr)
         referencePMD()
