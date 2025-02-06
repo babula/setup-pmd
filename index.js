@@ -8,10 +8,10 @@ try {
 }
 
 function installPMD() {
-    var download = 'wget https://github.com/pmd/pmd/releases/download/pmd_releases%2F7.6.0/pmd-dist-7.6.0-bin.zip -P /tmp'
-    var unzip = 'unzip /tmp/pmd-dist-7.6.0-bin.zip -d /tmp'
+    var download = 'wget https://github.com/pmd/pmd/releases/download/pmd_releases%2F7.10.0/pmd-dist-7.10.0-bin.zip -P /tmp'
+    var unzip = 'unzip /tmp/pmd-dist-7.10.0-bin.zip -d /tmp'
     var mk = 'mkdir $HOME/pmd'
-    var mv = 'mv /tmp/pmd-bin-7.6.0/* $HOME/pmd'
+    var mv = 'mv /tmp/pmd-bin-7.10.0/* $HOME/pmd'
     exec(download + ' && ' + unzip + ' && ' + mk + ' && ' + mv, function(error, stdout, stderr) {
         if (error) core.setFailed(stderr)
         referencePMD()
